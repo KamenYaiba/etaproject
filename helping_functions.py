@@ -40,7 +40,6 @@ def add_route_to_json(hour, route):
     routes_data.append(route.to_dict())
 
     with open(file_path, "w") as f:
-        print(file_path)
         json.dump(routes_data, f, indent=4)
 
 

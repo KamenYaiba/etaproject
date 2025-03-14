@@ -11,8 +11,14 @@ class Route:
 
         start, end = self.time_frame
 
-        for i in range(start, end):
-            add_route_to_json(i, self)
+        if start < end:
+            for i in range(start, end):
+                add_route_to_json(i, self)
+        else:
+            for i in range(start, 24):  # Loop from start to midnight
+                add_route_to_json(i, self)
+            for i in range(0, end):  # Loop from midnight to end
+                add_route_to_json(i, self)
 
     def to_dict(self):
         return {
