@@ -87,4 +87,5 @@ def add_eta():
 
 # Run Flask app (Only required if running independently)
 if __name__ == '__main__':
+    #ghjh
     scrape()
