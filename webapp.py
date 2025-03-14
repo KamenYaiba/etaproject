@@ -10,7 +10,7 @@ def index():
     return "NOTHING HERE"
 
 @app.route(f'/{key}')
-def index():
+def sc():
     scrape()
     return 979
 
