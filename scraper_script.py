@@ -20,20 +20,7 @@ def scrape():
 
         #user and route data for the DB
         route_id = r.route_id
-        user_id = r.user_id
-        time_frame = r.time_frame
-        time_zone = r.offset_to_gmt
 
-        route_average = 0 #get the average from the DB for the hour gmt_hour (defined above)
-        data_count = 0 #how many data points were used to calculate the average in the DB
-
-        if data_count == 0:
-            new_average = eta_mins
-        else:
-            new_average = (data_count * route_average + eta_mins) / (data_count + 1)
-
-        #send the new_average to the DB, and update data_count
-        new_average
-        data_count + 1
+        #<<<<<<<<<<<<<<<SEND TO DB>>>>>>>>>>>>>>>>
 
 
