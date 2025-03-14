@@ -1,5 +1,6 @@
 from flask import Flask, render_template
-import os
+from keys import key
+from scraper_script import scrape
 
 app = Flask(__name__)
 
@@ -8,9 +9,10 @@ app = Flask(__name__)
 def index():
     return "NOTHING HERE"
 
-@app.route('/secretsecretjobschedularsecret5765765765756nononoaiaiai657')
+@app.route(f'/{key}')
 def index():
-    return "NOTHING HERE"
+    scrape()
+    return 979
 
 
 
