@@ -20,18 +20,18 @@ DB_NAME = "postgres"
 
 def get_db_connection():
     return pg8000.connect(
-        user=os.getenv("DB_USER"),
-        password=os.getenv("DB_PASSWORD"),
-        host=os.getenv("DB_HOST"),
-        port=int(os.getenv("DB_PORT")),
-        database=os.getenv("DB_NAME")
+        user="postgres",
+        password="xWuUhObXjE7A0mGL",
+        host="db.ssarfaveqegyxubkgtro.supabase.co",
+        port=int("5432"),
+        database="postgres"
     )
 
 def scrape():
     gmt_hour = datetime.now(pytz.timezone('GMT')).hour
 
     # Load jobs file dynamically based on current hour
-    with open(f"jobs{gmt_hour}.json", "r") as f:
+    with open(f"jobs_JSON/jobs{gmt_hour}.json", "r") as f:
         routes = [Route.from_dict(route) for route in json.load(f)]
 
     for r in routes:
@@ -87,6 +87,4 @@ def add_eta():
 
 # Run Flask app (Only required if running independently)
 if __name__ == '__main__':
-    app.run(debug=True)
     scrape()
-    # Use `app` instead of `scrape()`

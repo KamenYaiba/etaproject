@@ -6,7 +6,10 @@ class Route:
         self.route_id = route_id
         self.user_id = user_id
         self.url = clean_url(url)
-        self.time_frame = time_to_gmt(time_frame, offset_to_gmt)
+        if isinstance(time_frame, list):
+            self.time_frame = time_frame
+        else:
+            self.time_frame = time_to_gmt(time_frame, offset_to_gmt)
         self.offset_to_gmt = offset_to_gmt
 
         start, end = self.time_frame
