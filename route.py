@@ -33,4 +33,4 @@ class Route:
             offset_to_gmt=data["offset_to_gmt"]
         )
 
-
+r=Route(1,2,"https://maps.app.goo.gl/huJRcEhmcg45BB439", "1-4", 3)
