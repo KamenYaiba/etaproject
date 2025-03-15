@@ -1,0 +1,12 @@
+[
+    {
+        "route_id": 3,
+        "user_id": 2,
+        "url": "https://www.google.com/maps/dir/24.7975619,46.7540017/24.6983747,46.8029179/%4024.7668213,46.7965664,12z/?hl=en",
+        "time_frame": [
+            3,
+            5
+        ],
+        "offset_to_gmt": 3
+    }
+]
